@@ -42,5 +42,5 @@ test('keep track of missed hits and hits', () => {
     newBoard.receiveAttack([2, 3], carrier)
     newBoard.receiveAttack([6, 8], carrier)
     newBoard.receiveAttack([8, 2], carrier)
-    expect(newBoard.missed.length).toEqual(1)
+    expect(newBoard.missed.length).toEqual(2)
 })
