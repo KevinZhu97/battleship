@@ -1,2 +1,4 @@
-import './style.css'
-//import images through here
+import './style.css' 
+import gameLoop from './gameLoop'
+
+gameLoop()

@@ -1,4 +1,4 @@
-import battleshipFactory from './battleship'   
+import battleshipFactory from '../battleship'   
 
 test('shows battleship name', () => {
     const submarine = battleshipFactory("submarine", 4);

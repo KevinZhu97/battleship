@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'Battle';
+    src: url('./font/shatterdomepersonalusegrunge-8bzd-webfont.woff2') format('woff2'),
+         url('./font/shatterdomepersonalusegrunge-8bzd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    font-family: 'Battle';
+    font-size: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.footer {
+    margin-top: 1rem;
+    background-color: rgba(25,25,25,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #68A7AD;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+}
+
+.footer img {
+    width: 1.2rem;
+    height: 1.2rem;
+    padding-left: 0.2rem;
+    transition: transform .5s ease-in-out;
+    filter: brightness(0) invert(1);
+}
+
+.footer img:hover {
+    transform: rotate(360deg);
+}
+
+.overlay {
+    top: 0px;
+    bottom: 0px;
+    background-color: rgba(0,0,0,0.5); 
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+.placement {
+    flex: 1;
+    height: 50rem;
+    width: 40rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.placement p:first-child {
+    font-size: 3rem;
+    font-family: 'Battle';
+    margin: 1rem 0;
+}
+
+.placement p:nth-child(2) {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.shipType {
+    text-decoration: underline;
+}
+
+.placement button {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-width: 0;
+}
+
+.placement button:hover {
+    transform: scale(1.05) perspective(1px)
+  }
+
+.container {
+    display: flex;
+    padding: 2rem;
+    padding-top: 0;
+    justify-content: space-evenly;
+}
+
+.placer, .left, .right {
+    display: flex;
+    height: 30rem;
+    width: 30rem;
+    margin-top: 1rem;
+    border: 1px solid black;
+}
+
+.column {
+    display: flex;
+    flex: 1;
+}
+
+.cell {
+    outline: 0.1px solid black;
+    flex: 1;
+    box-sizing: border-box;
+    height: 3rem;
+    width: 3rem;
+    /* cursor: url(NicePng_target-png_44385.png), auto;  */
+}
+
+/* .cell:hover {
+    cursor: url(NicePng_target-png_44385.png), auto;
+    background-color: lightgray
+} */
+
+
+.placerCell {
+    background-color: lightblue;
+}
+
+.occupied {
+    background-color: darkgray;
+    outline: 0.1px solid black;
+    flex: 1
+}
+
+.miss {
+    background-color: lightgreen;
+}
+
+.occupied.hit {
+    background-color: black;
+}
+
+.occupied2.hit {
+    background-color: black;
+}
+
+.gameOver {
+    position: fixed;
+    background-color: white;
+    height: 25rem;
+    width: 30rem;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+}
+
+.winner {
+    font-size: 5rem;
+}
+
+.playAgain {
+    width: 8rem;
+    height: 2rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.playAgain:hover {
+    border: 1px solid black;
+}

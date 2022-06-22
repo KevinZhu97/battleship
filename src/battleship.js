@@ -5,16 +5,20 @@
 //use .every() to see if all values are equal 1, to mean the whole ship has been hit
 
 const battleshipFactory = (name, length) => {
-    const shipLength = new Array(length).fill(0)
+    const shipBlocks = new Array(length).fill(true)
     
-    const hit = (hitIndex) => {
-        shipLength[hitIndex] = 1
+    const getShipBlocks = () => shipBlocks;
+
+    const hit = (num) => {
+        shipBlocks[num] = null;
     };
     const isSunk = () => {
-        return shipLength.every(position => position === 1)
+        const result = shipBlocks.every((block) => block === null);
+
+        return result
     };
 
-    return { name, length, hit, isSunk }
+    return { name, length, hit, isSunk, getShipBlocks }
 }
 
 module.exports = battleshipFactory;

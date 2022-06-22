@@ -1,5 +1,5 @@
-import gameboardFactory from './gameboardFactory'
-import battleship from './battleship'
+import gameboardFactory from '../gameboardFactory'
+import battleship from '../battleship'
 
 
 test('board length', () => {

@@ -1,6 +1,4 @@
-import playerFactory from './player'
-import gameboardFactory from './gameboardFactory'
-import battleshipFactory from './battleship'
+import playerFactory from '../player'
 
 test('generate random coords', () => {
     let computer = playerFactory();
